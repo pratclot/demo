@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = true;
+option java_package = "com.example.demo";
+option java_outer_classname = "TuneProtoService";
+
+package demo;
+
+service TuneProto {
+  rpc getAllTunes (google.protobuf.Empty) returns (stream gTune) {}
+  rpc getSomeTunes (gTuneName) returns (stream gTune) {}
+}
+
+message gTuneName {
+  string name = 1;
+}
+
+message gTune {
+  string name = 1;
+}

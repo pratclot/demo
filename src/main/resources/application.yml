@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/spring?serverTimezone=UTC
+    username: root
+    password: 12345678
+
+grpc:
+  port: 6666
+  security:
+    cert-chain: file:msi.crt
+    private-key: file:msi.pk8
